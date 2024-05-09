@@ -1,0 +1,28 @@
+name: Multiple Jobs Running in Parallel
+on: push
+jobs:
+  job_number1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v4
+      - name: Deploying Changes
+        run: echo "Changes Deployed 1"
+      - name: Deploying Next Changes
+        run: echo "Changes Deployed 2"
+  job_number2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v4
+      - name: Deploying Changes
+        run: echo "Changes Deployed 3"
+      - name: Deploying Next Changes
+        run: echo "Changes Deployed 4"
+  job_number3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v4
+      - name: Deploying Changes
+        run: echo "Changes Deployed 5"
