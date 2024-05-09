@@ -11,6 +11,7 @@ jobs:
       - name: Deploying Next Changes
         run: echo "Changes Deployed 2"
   job_number2:
+    needs: job_number1
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
@@ -20,6 +21,7 @@ jobs:
       - name: Deploying Next Changes
         run: echo "Changes Deployed 4"
   job_number3:
+    needs: job_number2
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
