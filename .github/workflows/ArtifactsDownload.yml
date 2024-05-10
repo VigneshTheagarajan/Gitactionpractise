@@ -1,8 +1,8 @@
 name: Artifacts Download
 on: workflow_dispatch
 jobs:
-  runs-on: ubuntu-latest
   build:
+    runs-on: ubuntu-latest
     steps:
       - name: Generate a Code
         run: echo "${{ toJSON(github) }}" >> ArtifactsDemo.txt
