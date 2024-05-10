@@ -1,0 +1,20 @@
+name: Sundaram Workflow
+on: workflow_dispatch
+jobs:
+  sundaram:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hi Sundaram, Hello World"
+      - name: Good By Sundaram
+        run: echo "Process completed"
+      - name: List of Files
+        run: echo "List of Files - $(ls)"
+  vignesh:
+    needs: sundaram
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hi Sundaram, Hello World"
+      - name: Good By Sundaram
+        run: echo "Process completed"
