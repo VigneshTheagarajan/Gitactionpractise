@@ -7,7 +7,7 @@ jobs:
       artifact_file: ${{ steps.publish.outputs.afilemame }}
     steps:
       - name: Generate a Code
-        run: echo "${{ toJSON(github) }}" >> "ArtifactsDemo_$(date"+%m%d%y").txt"
+        run: echo "${{ toJSON(github) }}" >> "ArtifactsDemo_$(date+"%m%d%Y%H%M%S").txt"
       - name: Output Extract
         id: publish
         run: ls ArtifactsDemo*.txt echo 'afilemame={}' >> $GITHUB_OUTPUT ';'
